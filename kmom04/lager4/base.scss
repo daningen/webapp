@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
+@import 'style/normalize.min';
+@import 'style/variables';
+@import 'style/navigation';
+@import 'style/title';
+@import 'style/container';
+@import 'style/typography';
+@import 'style/inventory';
+@import 'style/button';
+@import 'style/input';
+@import 'style/table';
+
+//@import normalize.min.css;
+//@import variables; //behöver inte skriva ut hela namnet variables.scss
+
+h1 {
+    font-size: 3rem;
+    font-family: $font-headers;
+    /*color: $header-color;*/
+    color: #42889b;
+}

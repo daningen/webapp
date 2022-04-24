@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Inleveranser</title>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://lager.emilfolino.se https://trafik.emilfolino.se https://nominatim.openstreetmap.org *.tile.openstreetmap.org 
+        *openstreetmap.org/2/1/2.png *'unsafe-eval';
+                style-src 'self' https://fonts.googleapis.com;
+                font-src https://fonts.gstatic.com;">
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://trafik.emilfolino.se 
+        https://lager.emilfolino.se https://nominatim.openstreetmap.org 
+        data: gap: https://ssl.gstatic.com 'unsafe-eval'; 
+        style-src https://fonts.googleapis.com* 
+        'self' 'unsafe-inline'; media-src *; img-src 
+        'self' https://fonts.googleapis.* https://*.tile.openstreetmap.org 
+        *openstreetmap.org/2/1/2.png * data: content:;"> -->
+
+
+        <!-- denna funkar utan fonter<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://trafik.emilfolino.se 
+        https://lager.emilfolino.se https://nominatim.openstreetmap.org 
+        data: gap: https://ssl.gstatic.com 'unsafe-eval'; 
+        style-src https://fonts.googleapis.com* 
+        'self' 'unsafe-inline'; media-src *; img-src 
+        'self' https://fonts.googleapis.* https://*.tile.openstreetmap.org 
+        *openstreetmap.org/2/1/2.png * data: content:;"> -->
+
+
+    <link rel="stylesheet" href="style.min.css" />
+    <!-- <link rel="stylesheet" href="style.min.css"> -->
+    <!-- <link rel="stylesheet" href="materialize.min.css"> 
+        <link rel="stylesheet" href="font-awesome.min.css">  -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+    <script src="cordova.js"></script>
+    <script src="dist/bundle.js"></script>
+    <script src="leaflet-heat.js"></script>
+    <div id="map"></div>
+</body>
+</html>

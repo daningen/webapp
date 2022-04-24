@@ -1,0 +1,16 @@
+.inventory {
+    list-style-type: none;
+    font-size: 1.4rem;
+    padding: 0;
+}
+
+.inventory li {
+    padding: 0.5rem;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.inventory li:nth-child(odd) {
+    background-color: #ff6e42;
+}

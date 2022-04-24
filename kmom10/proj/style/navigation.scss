@@ -1,0 +1,131 @@
+
+.top-nav {
+    // padding: 0.8rem 1rem;
+    // padding: 24px 0px 5px 30px;
+    // // border-bottom: 1px solid #333;
+    // height: 2.25rem;
+    // // width: 100%;
+    // // background-color: #42889b;
+    // /*display: flex;*/
+    // justify-content: space-between;
+    // font-size: 1.4rem;
+    // font-weight: 700;
+    // text-align: center;
+    // color: white;
+
+    // position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    // border-top: 1px solid #333;
+    width: 100%;
+    // padding-top: 0.8rem;
+    // padding-bottom: 0.8rem;
+    background: #42889b;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+}
+
+.top-nav a {
+    text-align: center;
+    /*color: #444;*/
+    color: white;
+}
+
+.top-nav span {
+    font-size: 0.8rem;
+}
+
+.top-nav .icon-text {
+    margin:1vw;
+   //  display: inline-block;
+   //  text-decoration: none!important;
+    font-family:'Open Sans',sans-serif;
+    font-size:calc(8px + .8vw)
+   }
+   .p .icon-text {
+       text-decoration: none;
+   }
+   
+   .top-nav .selected {
+       color: #ff6e42;
+   }
+   
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+// .sticky {
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+//   }
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+// .sticky + .content {
+//     padding-top: 60px;
+//   }
+
+
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    // border-top: 1px solid #333;
+    width: 100%;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background: #42889b;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.bottom-nav a {
+    text-align: center;
+    /*color: #444;*/
+    color: white;
+}
+
+.bottom-nav a.active i {
+    color: yellowgreen;
+}
+
+.bottom-nav span {
+    font-size: 0.8rem;
+}
+
+.bottom-nav .icon-text {
+ margin:1vw;
+//  display: inline-block;
+//  text-decoration: none!important;
+ font-family:'Open Sans',sans-serif;
+ font-size:calc(8px + .8vw)
+}
+.p .icon-text {
+    text-decoration: none;
+}
+
+.bottom-nav .selected {
+    color: #ff6e42;
+}
+
+// .inventory {
+//     list-style-type: none;
+//     font-size: 1.4rem;
+//     padding: 0;
+// }
+
+// .inventory li {
+//     padding: 0.5rem;
+//     display: flex;
+//     flex-flow: row;
+//     justify-content: space-between;
+// }
+
+// .inventory li:nth-child(odd) {
+//     background-color: #ff6e42;
+// }
+
+

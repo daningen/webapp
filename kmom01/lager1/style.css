@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Heebo|Raleway);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Heebo, sans-serif;
+}
+
+.title {
+    font-size: 2.4rem;
+    border-bottom: 1px solid #bbb;
+    margin-top: 0;
+}
+
+.container {
+    position: absolute;
+    top: 3.25rem;
+    padding: 1rem;
+    margin-bottom: 3.2rem;
+    width: 100%;
+}
+
+.container p {
+    font-family: Raleway, sans-serif;
+    line-height: 1.4;
+    font-size: 1.2rem;
+}
+
+.top-nav {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #333;
+    height: 3.25rem;
+    width: 100%;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    border-top: 1px solid #333;
+    width: 100%;
+    padding: 0.8rem 0;
+    background: #eee;
+    display: flex;
+    flex-flow: row;
+    align-content: stretch;
+    justify-content: space-evenly;
+}
+
+.bottom-nav a {
+    text-align: center;
+    color: #444;
+}
+
+.bottom-nav a.active i {
+    color: #ff6e42;
+}
+
+.bottom-nav span {
+    font-size: 0.8rem;
+}
+
+.inventory {
+    list-style-type: none;
+    font-size: 1.4rem;
+    padding: 0;
+}
+
+.inventory li {
+    padding: 0.5rem;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.inventory li:nth-child(odd) {
+    background-color: #ff6e42;
+}
