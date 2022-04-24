@@ -330,7 +330,7 @@ let delayDetails = {
                     //     href: `#!/heatView`
                     // }, " heat map som visar alla förseningar"),
                     // console.log("fck"),
-                    //testar kommenterar
+                    //testar kommenterar, ta bort denna
                     m("h1","Detaljer om försening"),
                     m("p", getDetailsX(vnode.attrs.id.trim())),
                 ),
