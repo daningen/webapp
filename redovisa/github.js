@@ -13,7 +13,8 @@ var github = (function () {
 
         window.mainContainer.appendChild(title);
 
-        fetch("https://api.github.com/users/daningen/repos").then(function (response) {
+        fetch("https://api.github.com/users/daningen/").then(function (response) {
+            
             return response.json();
         }).then(function(data) {
             data.forEach(function(repo) {

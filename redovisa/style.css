@@ -35,9 +35,10 @@ body {
 
 .blue-button {
     color: #fff;
-    background-color: #2049e1;
-    background-image: linear-gradient(#2049e1, #0039d0);
-    border-color: #0029c0;
+    margin: 10px;
+    background-color: #2084e1e7;
+    background-image: linear-gradient(#0c8add, #2d89f1ab);
+    border-color: #0073c0;
 }
 
 .blue-button:hover {
@@ -82,7 +83,7 @@ body {
     padding-bottom: 0.8rem;
     background: white;
     display: flex;
-    flex-flow: row || nowrap;
+    flex-flow: row nowrap;
     justify-content: space-evenly;
 }
 

@@ -52,14 +52,7 @@ const auth = {
             console.log(result);
 
             auth.token = result.data.token;
-            // if (auth.token) {
-
-            // } else {
-            //     myAlert();
-            // }
-
-            // return m.route.set("/");
-            // m.route.set("/invoices");
+           
             m.route.set("/stations");
         }).catch(function(e) {
             console.log(e);

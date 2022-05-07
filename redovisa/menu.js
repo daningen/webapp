@@ -1,4 +1,4 @@
-/* global home, about, github, presentation */
+/* global home, about, github, presentation, project */
 
 "use strict";
 
@@ -10,7 +10,7 @@ var menu = (function () {
             {name: "Om", class: "free_breakfast", nav: about.showAbout},
             {name: "Github", class: "folder", nav: github.showGithub},
             {name: "Redovisning", class: "people", nav: presentation.showMenu}];
-
+            
         navElements.forEach(function (element) {
             var navElement = document.createElement("a");
 
@@ -19,6 +19,8 @@ var menu = (function () {
             }
             console.log("in showMenu iterating navElements");
             navElement.addEventListener("click", element.nav);
+
+            console.log(element.nav);
 
             var icon = document.createElement("i");
 

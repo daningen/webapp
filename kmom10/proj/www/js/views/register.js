@@ -34,7 +34,8 @@ let regUser = {
                     }
                 }),
                 //m("input[type=submit][value=Logga in].button", "Logga in")
-                m("input[type=submit][value='register'].input.button.green-button", "registrera")
+                // m("input[type=submit][value='register'].input.button.green-button", "registrera")
+                m("input.button.green-button[type=submit][value=Logga in].button", "registrera")
                 
             ]))
         ];

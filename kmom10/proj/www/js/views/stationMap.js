@@ -4,7 +4,7 @@ import L, { marker } from "leaflet";
 import {OpenStreetMapProvider} from "leaflet-geosearch";
 import "leaflet/dist/leaflet.css";
 // import 'heatmap.js';
-import orders from "../models/orders";
+// import orders from "../models/orders";
 
 
 
@@ -112,31 +112,6 @@ function renderMarker () {
         });
 
 }
-
-// function renderMarker() {
-//     console.log("currentAddress in renderMarker");
-//     console.log(orders.currentAddress);
-//     console.log(typeof orders.currentAddress);
-//     geocoder
-//         .search({ query: orders.currentAddress})
-//         .then(function (result) {
-//             console.log("the result in renderMarker");
-//             console.log(result);
-
-
-//             if (result.length > 0) {
-//                 console.log("yes there is a result");
-//                 console.log("the result coordinates:" + [result[0].y, result[0].x]);
-//                 //skicka kordinater till show så att kartan fokuserar
-//                 L.marker([result[0].y, result[0].x]).addTo(map);
-
-//                 //denna sätter fokus på kartan
-//                 map.setView([result[0].y, result[0].x], 13);
-//             } else {
-//                 console.log("sorry");
-//             }
-//         });
-// }
 
 
 let stationMap = {

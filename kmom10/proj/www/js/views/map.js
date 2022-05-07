@@ -103,15 +103,6 @@ function showMap() {
             
         }
         
-       
-        // console.log("now call getCordinate");
-        //     getCordinate(cordString);
-        //     console.log(getCordinate(cordString));
-            // places2[obj[key].data.AdvertisedLocationName] = firstKeyValue;
-            // places2.name = key;
-            //         stationData.data = obj[key];
-            //         trafficModel.allDelayedLocSignStation.push(stationData);
-
 
     // console.log(trafficModel.allDelayedLocSignStation);
     var places = {
@@ -128,19 +119,7 @@ function showMap() {
         console.log(places2);
         console.log("show object places");
         console.log(places);
-    
-    // for (var place in places) {
-    //         console.log("the place");
-    //         console.log(place);
-    // }
 
-    // for (var place in places2) {
-    //     console.log("the place2");
-    //     console.log(place);
-    // }
-
-
-    // map = L.map('map').setView(places["BTH"], 5);
     map = L.map('map').setView(places["Kungsängen"], 6);
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',    {

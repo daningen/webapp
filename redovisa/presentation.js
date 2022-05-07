@@ -36,7 +36,8 @@ var presentation = (   function () {
             {name: "kmom03", class: "redov", nav: showKmom03},
             {name: "kmom04", class: "redov", nav: showKmom04},
             {name: "kmom05", class: "redov", nav: showKmom05},
-            {name: "kmom06", class: "redov", nav: showKmom06}];
+            {name: "kmom06", class: "redov", nav: showKmom06},
+            {name: "Projektet", class: "redov", nav: showKmom10}];
 
         navElements.forEach(function (element) {
             var btn = document.createElement("BUTTON");
@@ -500,6 +501,114 @@ var presentation = (   function () {
         window.mainContainer.appendChild(answer4);
     });
 
+    var showKmom10 = (function () {
+        console.log("in presentation.showKmom10 selected is ");
+        menu.showMenu("people");
+        window.mainContainer.innerHTML ="";
+
+        var title = document.createElement("h1");
+
+        title.className = "title";
+        title.textContent = "KMOM10";
+        window.mainContainer.appendChild(title);
+
+        var question1a = document.createElement("h4");
+        var question1 = document.createElement("h4");
+        var question2 = document.createElement("h4");
+        var question3 = document.createElement("h4");
+        var question4 = document.createElement("h4");
+
+        //var question4 = document.createElement("h4");
+        var answer1a = document.createElement("p");
+        var answer1 = document.createElement("p");
+        var answer2 = document.createElement("p");
+        var answer3 = document.createElement("p");
+        var answer4 = document.createElement("p");
+
+        // var answer5 = document.createElement("p");
+
+        question1a.textContent = "Alltmänt om projektet och min lösning";
+
+        question1.textContent = "Krav 1: Specifikation och arkitektur";
+
+        question2.textContent = "Krav 2: Karta och GPS ";
+
+        question3.textContent = "Krav 4: Autentisering av användaren (optionellt) ";
+
+        question4.textContent = "Krav 6: Heatmap (optionellt)";
+
+        answer1a.textContent = `Till applikationen har jag använt Cordova för att kunna exekvera min webbapplikation." 
+        "Applikationen är även byg`
+
+        answer1.textContent = "Till applikationen har jag använt Cordova för att kunna exekvera min webbapplikation." +
+        "Applikationen är även byggd för IOS, (se några skärmdumpar längre ner). Eftersom jag använder Iphone blev valet enkelt att "+
+        "konfigurera så att min applikation fungerar på en sådan enhet.Koden använder HTML, CSS och SASS samt JavaScript. " +
+        "All CSS kod är uppdelad i olika moduler för att göra det lättare att navigera och ändringar. Jag har strävat efter " +
+        "att använda mig av variabler för att få ökad flexibilitet och kunna göra färre ändringar om jag skulle vilja " +
+        "färgpaletten över hela applikationen. Med SASS kompilerar jag sedan samtliga CSS filer. " +
+        " Mithril tillsammans med Javascript används genomgående.  Detta fungerar väl när jag bygger upp vyer och " +
+        "router med hjälp av de inbyggda virtuella noderna."+
+         "Index.js är den centrala sidan varifrån min kod styrs. Här ligger samtliga endpoints som används till min routing." +
+         
+        "Jag använder mig av konceptet model/views där jag från mina modeller kopplar upp applikationen mot de APIer " +
+        "som applikationen använder. Mina vyer består av ett antal olika javascript filer som ska representera den " +
+        "funktionalitet som behövs för aktuell presentation."+
+        "Till varje vy som anropas, anropas även en layoutfil som innehåller gemensamt utseende genomgående över applikationen," +
+        " tex header- och footer och navigation." +
+        `Jag kompilerar de olika javascript modulerna med hjälp av Webpack som skapar en bundle fil som jag pekar på i min index.html vid uppstart.  
+
+        NPM har använts till att installera de olika paketen/plugins som används i applikationen. Package.json filen innehåller alla paket och kommandon/script som behövs till kompilation med mera. 
+        
+        I 90 procent av fallen, åtminstone nu i slutet har jag i stort sett endast använt dessa två kommandon:
+        
+        npm start. – skapar nytt bygge
+        npm run sass-compile – kompilerar CSS kod.
+        
+        
+        Nedanstående bild visar uppstarten av applikationen och de olika viktiga plugins som ingår och den relativa sökvägen till den exekverbara javascriptkoden. 
+        `;
+    
+
+        answer2.textContent = `JFrån sidan Förseningar visas alla stationer som har en försening. Härifrån kan jag sedan välja visa karta för att få upp stations geografiska placering.
+        APIet är otydligt och jag valde att på kartan endast visa en försening. Under försening har jag däremot visat samtliga förseningar från vald station. Bilden nedan illustrera min lösning med FromLocation som är station samt uträknad tid för dess första försening.
+        `;
+
+        answer3.textContent = `Jag löste detta genom att använda autentisering då jag vill se alla mina stationer. Kontroll görs om jag är inloggad in index.js (är auth.token satt). 
+        Annars skickas jag vidare till login sidan. 
+        Om jag vill skapa en ny användare väljer jag registrera användare. 
+        Efter lyckad inloggning skickas jag till sidan som visar alla stationer och där kan jag lägga till favoriter. För att undvika dubbletter 
+        kontrollerar jag att stationen inte redan finns. Jag lagrat stationsobjektet i en array.Favoritsidan visar tydligt om en station har en försening eller ej. Till denna applikation har jag ingen databas för persistens utan har valt att visa hur det kan se ut. 
+        För vidareutveckling hade jag förmodligen lagrat innehåll i en databas och använt inloggad användare som nyckel. `;
+
+        answer4.textContent = `Jag valde modulen Leaflet.heat. Att den var den tycks vara den mest lättviktiga avgjorde 
+        tillsammans med dokumentationen var hyfsat tydlig och gjorde den möjlig att implementera. Dessutom underhålls 
+        den av en ukrainare som grundade Leaflet (Leaflet was created 11 years ago by Vladimir Agafonkin, an 
+            Ukrainian citizen living in Kyiv.
+            ) * se note lite längre ner. Jag jämförde denna med heatmap-pluginen som även den hade bra dokumentation. 
+            Implementationen blev dock mer utmanande än jag först anat. Dels fick jag problem med NPM installationen och 
+            fick gå in och rensa manuellt för att node-modules paketet. Jag har fortfarande inte full koll på hur det fungerar, 
+            när jag tittar i node paketet har det skapats länkar där som jag tyckte pekade konstigt (leaflet-heatmap -> 
+                leaflet-heatmap). CSS filerna pekade jag först ut i min html-fil (nu borttaget). I stället laddade jag 
+                ner css och paketerade med hjälp av SASS.
+            
+            Detta blev resultatet. * Note: En liten detalj i allt elände med Ukraina är att om man zoomar ut 
+            kartan så kan man se en markering runt Kiev. `;
+
+
+
+
+        window.mainContainer.appendChild(question1a);
+        window.mainContainer.appendChild(answer1a);
+        window.mainContainer.appendChild(question1);
+        window.mainContainer.appendChild(answer1);
+        window.mainContainer.appendChild(question2);
+        window.mainContainer.appendChild(answer2);
+        window.mainContainer.appendChild(question3);
+        window.mainContainer.appendChild(answer3);
+        window.mainContainer.appendChild(question4);
+        window.mainContainer.appendChild(answer4);
+    });
+
     return {
         showMenu: showMenu,
         //showMenu: showMenu,
@@ -509,5 +618,6 @@ var presentation = (   function () {
         showKmom04: showKmom04,
         showKmom05: showKmom05,
         showKmom06: showKmom06,
+        showKmom10: showKmom10,
     };
 }   ) (presentation);

@@ -83,11 +83,9 @@ let trafficModel = {
         };
         console.log("filter now");
 
-        //   console.log(lookupAddress);
-        //   console.log(lookupAddress.length);
+
         let lookupAd = lookupAddress.trim();
-        //   console.log(lookupAd.length);
-        //calling filterArray to get address information from array trafficModel.allStations
+
         let resultAddress = filterArray(trafficModel.allStations, 'AdvertisedLocationName', lookupAd);
         console.log(resultAddress);
 
@@ -135,18 +133,6 @@ let trafficModel = {
         trafficModel.currentSearchAddress = resultAddress.map((item) => item.AdvertisedLocationName);
 
 
-        // trafficModel.allStations.forEach(function (item, index) {
-        //     // console.log(item.Geometry, index);
-        //     // console.log(item);
-        //     // console.log("station");
-        //     // console.log("check " + item.AdvertisedLocationName + " vs " + lookupAddress);
-        //     if (item.AdvertisedLocationName.trim() == lookupAddress) {
-        //         console.log("yes, address found: " +lookupAddress);
-        //         console.log(item.Geometry);
-        //     } else {
-        //         // console.log("nope " + item.AdvertisedLocationName + " versus " + lookupAddress);
-        //     }
-        //   });
         console.log("hoppp");
         // const largeGroup = trafficModel.allStations.filter(activity => (activity.LocationName = station)); 
         //  console.log(largeGroup);
@@ -172,17 +158,12 @@ let trafficModel = {
         console.log(name2.length);
         console.log(trafficModel.longAndShortNameObj);
         // console.log(trafficModel.longAndShortNameObj.find(key => trafficModel.longAndShortNameObj[key] === "Arvika"));
-        // array1.find(element => element > 10)
 
+        // console.log(Object.keys(trafficModel.longAndShortNameObj));
 
-        // console.log(result);
-        // console.log(trafficModel.allDelays); 
-
-        console.log(Object.keys(trafficModel.longAndShortNameObj));
-
-        console.log(Object.values(trafficModel.longAndShortNameObj["Alingsås"]));
-        console.log(`${name2}`);
-        console.log(Object.values(trafficModel.longAndShortNameObj[`${name2}`]));
+        // console.log(Object.values(trafficModel.longAndShortNameObj["Alingsås"]));
+        // console.log(`${name2}`);
+        // console.log(Object.values(trafficModel.longAndShortNameObj[`${name2}`]));
 
         let myString = Object.values(trafficModel.longAndShortNameObj[`${name2}`]);
         console.log("mystring");
@@ -250,75 +231,6 @@ let trafficModel = {
 
 
 
-
-        // console.log(startTime.getM);
-        // const birthday = new Date(startTime);
-        // console.log(birthday.getHours());
-
-
-
-        // let shortAdvTime = this.advertisedTimeAtLocation.substr(11,8);
-        // let shortEstTime = this.estimatedTimeAtLocation.substr(11,8);
-        // let hourAdvTime = this.advertisedTimeAtLocation.substr(11,2);
-        // let hourEstTime = this.estimatedTimeAtLocation.substr(11,2);
-        // let minAdvTime = this.advertisedTimeAtLocation.substr(14,2);
-        // let minEstTime = this.estimatedTimeAtLocation.substr(14,2);
-
-        // console.log("shortAdvTime: " + shortAdvTime);
-        // console.log("shortEstTime: " + shortEstTime);
-
-
-
-        // let time1 = shortAdvTime.getTime();
-        // let time2 = shortEstTime.getTime();
-        // console.log("time1:");
-        // console.log(time1);
-        // console.log("time2:");
-        // console.log(time2);
-
-        // let diffTime = (time2 - time1);
-        // console.log("diffTime");
-        // console.log(diffTime);
-
-        // console.log(shortAdvTime);
-        // console.log(shortEstTime);
-        // console.log(hourAdvTime);
-        // console.log(hourEstTime);
-        // console.log(minAdvTime);
-        // console.log(minEstTime);
-        // let diffHour = hourEstTime - hourAdvTime;
-        // console.log("delayed hours");
-        // console.log(diffHour);
-        // let diffMin = minEstTime - minEstTime;
-        // console.log("delayed minutes");
-        // console.log(diffMin);
-
-        // let timeHrAdv =  hourAdvTime * 3600 * 1000;
-        // let timeMinAdv = minAdvTime * 60 * 1000;
-        // console.log("Adv hour milli sec:" + timeHrAdv);
-        // console.log("Adv minutes milli sec: " + timeMinAdv);
-
-        // let timeHrEst = hourEstTime * 3600 * 1000;
-        // let timeMinEst = minEstTime * 60 * 1000;
-
-        // console.log("Estimate hour milli sec:" + timeHrEst);
-        // console.log("Estimate minutes milli sec: " + timeMinEst);
-
-
-
-        // let diffMilliSec = 
-        //     var startTime = "09:00:00";
-        // var endTime = "10:30:00";
-
-
-        // let myRes = trafficModel.allDelays[0].filter(function(item) {
-        //         return item.LocationName == `${name2}`;
-        //     });
-
-        //     console.log("myRes");
-        //     console.log(myRes);
-
-
     },
 
 
@@ -354,79 +266,19 @@ let trafficModel = {
             var value = obj[key];
             if (obj.hasOwnProperty(key)) {
                 if (key == shortName) {
-                    // console.log("hit in setStationName");
-                    // console.log(key + " -> " + obj[key]);
-                    // console.log(obj[key]);
-                    // console.log(obj[key].AdvertisedLocationName);
-                    // console.log(obj[key].Geometry);
-
-
-                    //exempel som jag kan använda
-                    // var key = "happyCount";
-                    // var obj2 = {};
-                    // obj2[key] = someValueArray;
-                    // myArray.push(obj2);
-                    //
                     let stationData = {};
                     stationData.name = key;
                     stationData.data = obj[key];
                     trafficModel.allDelayedLocSignStation.push(stationData);
 
-                    // console.log("whats in trafficModel.allDelayedLocSignStation?");
-                    // console.log(stationData);
 
                 }
-                // if (key == "AdvertisedLocationName") {
-                //     console.log("yes hitting");
-                //     console.log(value[0]);
-                // }
             }
         }
 
 
 
-
-        //return "bohoho";
-
     },
-    //not used yet
-    createDelayDetailsObj: async function (xxx) {
-        console.log("create details");
-    },
-
-
-    //hämta specifik order
-    getOrder: function (orderId) {
-        return m.request({
-            method: "GET",
-            // url: `${baseURL}/orders/${id}?api_key=${apiKey}`
-            url: `${orders.url}/${orderId}?api_key=${apiKey}`,
-        }).then(function (result) {
-            orders.currentOrder = result.data;
-            orders.currentAddress = `${result.data.address}, ${result.data.city}, ${result.data.country}`;
-            console.log("current orders;");
-            console.log(orders.currentOrder);
-            console.log("current address;");
-            console.log(orders.currentAddress);
-        });
-    },
-
-    //hämta specifik station baserad på delays
-    // getStation: function (location) {
-    //     return m.request({
-    //         method: "GET",
-    //         // url: `${baseURL}/orders/${id}?api_key=${apiKey}`
-    //         url: `${orders.url}/${orderId}?api_key=${apiKey}`,
-    //     }).then(function (result) {
-    //         orders.currentOrder = result.data;
-    //         orders.currentAddress = `${result.data.address}, ${result.data.city}, ${result.data.country}`;
-    //         console.log("current orders;");
-    //         console.log(orders.currentOrder);
-    //         console.log("current address;");
-    //         console.log(orders.currentAddress);
-    //     });
-    // },
-
 
     getStations: function () {
         console.log("in TrafficModel.getStations");
@@ -442,40 +294,9 @@ let trafficModel = {
             //orders.ordersReadyToSend = result.data.filter(function(order) {
             let i = 0;
             result.data.forEach(function (station) {
-                // console.log("2. loopa igenom alla stationer, här skapas allLocSignObj");
-                // let allLocSignObj = {};
-                // console.log("the resultset:");
-                // console.log(result.data);
                 console.log("sätter stationKey till blankt");
                 let stationKey = "";
-                // i ++;
 
-
-                //start
-                // for (var i = 0; i < result.data.length; i++) {
-                //     document.write("<br><br>array index: " + i);
-                //     var obj = result.data[i];
-                //     for (var key in obj){
-                //       var value = obj[key];
-                //       document.write("<br> - " + key + ": " + value);
-                //          (obj.hasOwnProperty("FromLocation")); //false
-                //       if (key == "LocationSignature") {
-                //           console.log("hit");
-                //         //   console.log(value[0].LocationName);
-                //           console.log(value);
-
-                //         trafficModel.allDelayedLocSign.push(value[0].LocationName);
-
-                //       }
-
-                //     }
-
-                //     console.log(delay.FromLocation[0]);
-                //     console.log("ToLocation");
-                //     console.log(delay.ToLocation[0]);  
-                // });
-                //   }
-                //stop
                 console.log("AdvertisedLocationName in getStations: " + station.AdvertisedLocationName);
                 //
                 trafficModel.longAndShortNameObj[station.AdvertisedLocationName] = station.LocationSignature;
@@ -491,17 +312,9 @@ let trafficModel = {
                 //nyckel blir locationSignature och till denna kopplas hela objektet station
                 // console.log("sätter ihop stationKey och hela objektet station");
                 // console.log("stationKey: " + stationKey + " station: ");
-                // console.log(station);
-                // trafficModel.allLocSignObj = station;
+                
                 trafficModel.allLocSignObj[stationKey] = station;
-                // console.log("allLocSignObj to push: and i is  " + i);
-                // console.log(trafficModel.allLocSignObj);
-                // console.log(Object.values(trafficModel.allLocSignObj));
-
-                // console.log("push till mitt objekt allLocSignObj");
-                // trafficModel.allDelayedLocSign[stationKey].push(trafficModel.allLocSignObj);
-                //nedan tar jag bort trafficModel.allLocSign.push(stationKey);
-                // trafficModel.allLocSign.push(stationKey);
+               
 
                 //lägg in alla stationer i separat array
                 console.log("lägg in alla stationer, långa namnet i en egen array trafficModel.onlyStations");
@@ -513,87 +326,17 @@ let trafficModel = {
 
 
             });
-            // console.log("stationKeys only the keys: " + trafficModel.allLocSign.length);
-            //     console.log(trafficModel.allLocSign);
 
-            //     const distinct = (value, index, self) => {
-            //         return self.indexOf(value) === index;
-            //         }
-            //     const distinctLocSign = trafficModel.allLocSign.filter(distinct);
-            //     console.log("the distinct: " + distinctLocSign.length);
-            //     console.log(distinctLocSign);
-            //     var unique = trafficModel.allLocSign.filter((v, i, a) => a.indexOf(v) === i); 
-            //     console.log("unique: ");
-            //     console.log(unique);
-            //     console.log(unique.length);
-
-
-            // trafficModel.allStations = result;
-            // orders.currentOrders = result.data.filter(function(order) {
-            //     return order.status_id >= 200;
-            // });
-
-            //console.log(orders.ordersReadyToSend);
-            // console.log("allStations;");
-            // console.log(trafficModel.allStations);
-
-            // console.log("allDelayedLocSign: ");
-            // console.log(trafficModel.allDelayedLocSign);
-            // console.log(trafficModel.allStations.data);
-            // console.log(trafficModel.allStations.data[0]);
         });
     },
-    //inparm värde och array att söka i
-    // itemExists: function (item, container) {
-    //     // traverse the container
-    //     for (let i = 0; i < container.length; i++) {
-    //         if (container[i] == item) {
-    //             console.log(true);
 
-    //         }
-    //     }
-    // },
-
-    // getDelayedStations: function(locSign) {
-    //     console.log("getDelayedStations model");
-    //     console.log("LocationSignature" + locSign);
-    //     return m.request({
-    //         method: "GET",
-    //         url: `${trafficModel.url}`
-    //     }).then(function(result) {
-    //         trafficModel.allStations = result.data;
-    //         //orders.ordersReadyToSend = result.data.filter(function(order) {
-
-    //             result.data.forEach(function (station) {
-    //                 console.log("AdvertisedLocationName");
-    //                 console.log(station.AdvertisedLocationName);
-    //                 console.log(station.LocationSignature);
-
-    //             });
-
-
-
-    //         console.log("getStations model");
-    //         console.log(trafficModel.allLocSignObj);
-    //         // trafficModel.allStations = result;
-    //         // orders.currentOrders = result.data.filter(function(order) {
-    //         //     return order.status_id >= 200;
-    //         // });
-
-    //         //console.log(orders.ordersReadyToSend);
-    //         console.log("allStations;");
-    //         console.log(trafficModel.allStations);
-    //         console.log(trafficModel.allStations.data);
-    //         console.log(trafficModel.allStations.data[0]);
-    //     });
-    // },
 
     getDelayDetails: async function () {
 
         console.log("getDelayDetails model");
         // console.log(trafficModel.delayDetObj);
-        
-       
+
+
 
         for (let prop in trafficModel.delayDetObj) {
             console.log("in prop");
@@ -601,62 +344,17 @@ let trafficModel = {
             console.log("trafficModel.delayDetObj[prop]");
             console.log(trafficModel.delayDetObj[prop]);
             console.log(trafficModel.delayDetObj[prop].FromLocation[0]);
-            
+
             console.log(trafficModel.delayDetObj[prop].AdvertisedTimeAtLocation);
             console.log(trafficModel.delayDetObj[prop].EstimatedTimeAtLocation);
         }
-
-       
-        //object to save details on each delay
-        
-        
-        // let obj = trafficModel.allDelays;
-
-        // console.log("check length");
-        // console.log(obj.length);
-        // for (var key in obj) {
-        //     let delayDetailsObj = {
-        //         key1: "",
-        //         key2: "",
-        //         key3: "",
-        //         key4: ""
-        //     };
-        //     var value = obj[key];
-        //     //   document.write("<br> - " + key + ": " + value + " in delay");
-        //     //   console.log(obj.hasOwnProperty("FromLocation")); //false
-        //     if (key == "FromLocation") {
-        //         delayDetailsObj.key1 = value[0].LocationName;
-        //         console.log("delayDetailsObj.key1 = value[0].LocationName");
-        //         console.log(delayDetailsObj.key1 = value[0].LocationName);
-
-        //     }
-        //     if (key == "ToLocation") {
-        //         delayDetailsObj.key2 = value[0].LocationName;
-        //     }
-
-        //     if (key == "AdvertisedTimeAtLocation") {
-        //         console.log("yes time");
-        //         console.log(value);
-        //         delayDetailsObj.key3 = value;
-        //     }
-        //     if (key == "EstimatedTimeAtLocation") {
-        //         console.log("yes time");
-        //         delayDetailsObj.key4 = value;
-        //     }
-        //     //add object to delayDetails array
-        //     trafficModel.delayDetails.push(delayDetailsObj);
-
-        // }
-        
-
         console.log("nå vad finns i array");
         console.log(trafficModel.delayDetails);
-        
+
     },
 
-
     getDelays: async function () {
-        
+
 
         console.log("getDelays model");
 
@@ -666,8 +364,8 @@ let trafficModel = {
         });
         trafficModel.allDelays = result.data;
         // trafficModel.delayDetObj = result.data //testar 20220408
-        
-        
+
+
         //iterate each row i for each row in result.data
         for (var i = 0; i < result.data.length; i++) {
             // document.write("<br><br>array index, number of delays? : " + i);
@@ -680,14 +378,14 @@ let trafficModel = {
                 estimatedTime: ""
             };
 
-           
+
 
             // console.log("whats in obj: ");
             // console.log(obj);
 
-            
+
             // console.log("trafficModel.delayDetails");
-            
+
 
             for (var key in obj) {
                 var value = obj[key];
@@ -734,18 +432,7 @@ let trafficModel = {
                     delayDetailsObj2.estimatedTime = value;
 
                 }
-                
 
-                
-
-                
-
-                
-                // if (key == "EstimatedTimeAtLocation") {
-                //     console.log("yes time");
-                //     delayDetailsObj.key4 = value;
-                // }
-                //add object to delayDetails array
 
             }
             // trafficModel.delayDetails.push(delayDetailsObj);
@@ -758,19 +445,10 @@ let trafficModel = {
                 // console.log("sorry no hit key1 is blank");
                 // console.log(delayDetailsObj2)
             }
-            
-            // console.log("nå vad finns i array");
-            // console.log(trafficModel.delayDetails);
-            // console.log(trafficModel.delayDetails.length);
+
         }
-        // console.log("now it trafficModel.delayDetails is populated");
-        // console.log(trafficModel.delayDetails.length);
-        // console.log("trafficModel.delayDetails");
-        // console.log(trafficModel.delayDetails);
-        // console.log("trafficModel.allDelays");
-        // console.log(trafficModel.allDelays);
-        // trafficModel.getDelayDetails();
-        
+
+
         trafficModel.allUniqueDelayedLocSign = trafficModel.allDelayedLocSign.filter((v, i_1, a) => a.indexOf(v) === i_1);
         console.log("jaja allUniqueDelayedLocSign: " + trafficModel.allUniqueDelayedLocSign);
         console.log("för varje unik locSign anropas setStationName där jag fyller på array med stationName");
@@ -788,31 +466,8 @@ let trafficModel = {
             // console.log(myResult);
         }
 
-
-
-
     },
 
-
-
-    //all unique delays
-
-    // getUniqueDelays: function() {
-    //     console.log("getUniqueDelays modelllll");
-    //     console.log(trafficModel.allDelayedLocSign.length);
-    //     // console.log(trafficModel.allDelayedLocSign.filter(distinct));
-    //     console.log("något unikt? hallå");
-    //     // 
-    //         //   console.log("distinct locationSign from allDelayedLocSign in getUniqueDelays");
-    //           console.log(trafficModel.allDelayedLocSign);
-    //         //   const distinctLocSign = trafficModel.allDelayedLocSign.filter(distinct);
-    //           trafficModel.distinctLocSign = trafficModel.allDelayedLocSign.filter(distinct);
-    //           console.log(trafficModel.distinctLocSign);
-    //           console.log("något unikt?");
-    // },
-
-
-    //
 
     org_getDelays: function () {
         console.log("getDelays model");
@@ -827,7 +482,6 @@ let trafficModel = {
         }).then(function (result) {
             trafficModel.allDelays = result.data;
 
-
             //nedan skriver ut value för alla nycklar i objektet, men array i obj skrivs ut som en klump
             // for(var key in result.data) {
             //     for (var key1 in result.data[key]) {
@@ -835,7 +489,6 @@ let trafficModel = {
             //     }
             //  }
 
-            // var objects = [];¨
             console.log("nollställer array allDelayedLocSign");
             trafficModel.allDelayedLocSign.length = 0;
             for (var i = 0; i < result.data.length; i++) {
@@ -859,8 +512,6 @@ let trafficModel = {
                     }
 
                 }
-
-
                 //     console.log(delay.FromLocation[0]);
                 //     console.log("ToLocation");
                 //     console.log(delay.ToLocation[0]);  
@@ -877,21 +528,6 @@ let trafficModel = {
             console.log("hur många poster allDelayedLocSign?");
             console.log(trafficModel.allDelayedLocSign.length);
 
-            //orders.ordersReadyToSend = result.data.filter(function(order) {
-            // console.log("trafficModel.allDelays");
-            // console.log(trafficModel.allDelays[0]);
-
-            // Object.entries(repo).forEach(([key, value]) => {
-            //     console.log(`${key}: ${value}`);
-
-
-            //funkar
-            // result.data.forEach(function (delay) {
-            //     console.log("FromLocation");
-            //     console.log(delay.FromLocation[0]);
-            //     console.log("ToLocation");
-            //     console.log(delay.ToLocation[0]);  
-            // });
 
         });
 
@@ -901,68 +537,7 @@ let trafficModel = {
     },
 
 
-    getReadyToSendOrders: function () {
-        return m.request({
-            method: "GET",
-            url: `${orders.url}?api_key=${apiKey}`
-        }).then(function (result) {
-            //orders.ordersReadyToSend = result.data.filter(function(order) {
-            console.log("getReadyToSendOrders model");
-            orders.currentOrders = result.data.filter(function (order) {
-                return order.status_id >= 200;
-            });
-
-            //console.log(orders.ordersReadyToSend);
-            console.log("currentOrders;");
-            console.log(orders.currentOrders);
-        });
-    },
-
-
-    currentOrder: {},
-    currentAddress: {},
-    save: function () {
-        console.log(orders.currentOrders);
-    },
-    getTotalPrice: function (order) {
-        var totalPrice = 0;
-
-        order.order_items.forEach(function (product) {
-            totalPrice += (product.amount * product.price);
-        });
-        return totalPrice;
-    },
-
-
-    sendInvoice: function () {
-        var order = orders.curr;
-
-        console.log("the token is in sendInvoice");
-        console.log(authorization.token);
-
-        order.api_key = authorization.payload.api_key;
-        order.status_id = "600";
-        return m.request({
-            method: 'PUT',
-            url: `${authorization.baseURL}/orders`,
-            data: order
-        }).then(function () {
-            order.total_price = orders.getTotalPrice(order);
-            order.creation_date = orders.getDate();
-            order.due_date = orders.getDate(30);
-            order.order_id = order.id;
-            return m.request({
-                method: 'POST',
-                url: `${authorization.baseURL}/invoices`,
-                data: order,
-                headers: {
-                    'x-access-token': authorization.token
-                }
-            });
-        }).then(function () {
-            m.route.set("/invoices");
-        });
-    },
+    // 
 
     getDate: function (days = 0) {
         var d = new Date();

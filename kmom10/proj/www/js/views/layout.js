@@ -24,16 +24,7 @@ let layout = {
                 //
                 m("nav.top-nav",
                 [
-                    // m("a", {
-                    //     href: "/",
-                    //     oncreate: m.route.link,
-                    //     class: (m.route.get().split("/")[1] == "") ? "selected" : null
-                    // }, [
-                    //     m("i.material-icons", "home"),
-                    //     m("p.icon-text", "Hem")
-                    //     //"Inleveranser"
-                    // ]),
-                    //delays
+                   
                     m("a", {
                         href: "#!/favorites",
                         oncreate: m.route.link,

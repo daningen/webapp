@@ -42,15 +42,6 @@ function addFavorite(favoriteObj) {
     // console.log(shortName);
     console.log("changed");
 
-    // if (!trafficModel.favorites2.includes(favoriteObj)) {
-    //     console.log("ok add to favorites");
-    //     trafficModel.favorites2.push(favoriteObj);  
-    //   } else {
-    //       console.log("already added to favorites");
-    //   }
-      
-
-    
     
 
     //

@@ -14,8 +14,6 @@ let login = {
                 onsubmit: function(event) {
                     event.preventDefault();
                     auth.login();
-                    isLoggedIn = true
-                    m.route.set("/stationList")
                 } }, [
                 m("label.input-label", "E-post"),
                 m("input.input[type=email][placeholder=E-post]", {
